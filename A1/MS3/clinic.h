@@ -1,9 +1,9 @@
 /*/////////////////////////////////////////////////////////////////////////
                         Assignment 1 - Milestone 3
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+Full Name  : Anton Samofalov
+Student ID#: 172271223
+Email      : asamofalov@myseneca.ca
+Section    : NJJ
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -35,8 +35,11 @@ piece of work is entirely of my own creation.
 
 
 // MS#3 Additional macro's:
-// ToDo:
+#define START_HOUR 10
+#define END_HOUR 14
+#define INTERVAL 30
 
+#include <stdbool.h>
 
 //////////////////////////////////////
 // Structures
@@ -44,24 +47,42 @@ piece of work is entirely of my own creation.
 
 // Data type: Phone
 // (Copy your code from MS#2)
-
+struct Phone
+{
+    char description[PHONE_DESC_LEN + 1];
+    char number[PHONE_LEN + 1];
+};
 
 // Data type: Patient 
 // (Copy your code from MS#2)
+struct Patient
+{
+    int patientNumber;
+    char name[NAME_LEN + 1];
+    struct Phone phone;
+};
 
 // ------------------- MS#3 -------------------
 
 // Data type: Time
-// ToDo:
-
+struct Time {
+    int hour;
+    int min;
+};
 
 // Data type: Date
-// ToDo:
-
+struct Date {
+    int year;
+    int month;
+    int day;
+};
 
 // Data type: Appointment
-// ToDo:
-
+struct Appointment {
+    int patientNumber;
+    struct Date date;
+    struct Time time;
+};
 
 
 // ClinicData type: Provided to student
@@ -132,20 +153,16 @@ void removePatient(struct Patient patient[], int max);
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // View ALL scheduled appointments
-// Todo:
-
+void viewAllAppointments(const struct ClinicData* data);
 
 // View appointment schedule for the user input date
-// Todo:
-
+void viewAppointmentSchedule(struct ClinicData* data);
 
 // Add an appointment record to the appointment array
-// Todo:
-
+void addAppointment(struct Appointment* appoints, int maxAppoints, struct Patient* patients, int maxPatient);
 
 // Remove an appointment record from the appointment array
-// Todo:
-
+void removeAppointment(struct Appointment* appoints, int maxAppoints, struct Patient* patients, int maxPatient);
 
 
 //////////////////////////////////////
@@ -165,6 +182,26 @@ int nextPatientNumber(const struct Patient patient[], int max);
 int findPatientIndexByPatientNum(int patientNumber,
                                  const struct Patient patient[], int max);
 
+// Compares two appointments based on their dates
+int compareDates(const struct Appointment* first, const struct Appointment* second);
+
+// Sorts an array of appointments in ascending order based on their dates using bubble sort
+void bubbleSort(struct Appointment* appoints, int max);
+
+// Checks if a specific time slot is available for scheduling an appointment
+bool isTimeSlotAvailable(const struct Appointment* appoints, int max, const struct Date* date, const struct Time* time);
+
+// Finds the first available slot in the appointment array
+int findEmptyAppointmentSlot(struct Appointment* appoints, int max);
+
+// Validates a patient number if it exists in the lists of patients
+int getValidPatientNumber(struct Patient* patients, int max);
+
+// Prompts the user to enter a valid date and returns it as a Date structure
+struct Date getValidDate(void);
+
+// Prompts the user to enter a valid time and returns it as a Time structure
+struct Time getValidTime(void);
 
 //////////////////////////////////////
 // USER INPUT FUNCTIONS
@@ -175,8 +212,6 @@ void inputPatient(struct Patient* patient);
 
 // Get user input for phone contact information
 void inputPhoneData(struct Phone* phone);
-
-
 
 
 //////////////////////////////////////

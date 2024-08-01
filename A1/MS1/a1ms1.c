@@ -3,10 +3,10 @@
 
 /*/////////////////////////////////////////////////////////////////////////
                         Assignment 1 - Milestone 1
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+Full Name  : Anton Samofalov
+Student ID#: 172271223
+Email      : asamofalov@myseneca.ca
+Section    : NJJ
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -42,6 +42,7 @@ piece of work is entirely of my own creation.
 
 #include <stdio.h>
 
+#define _CRT_SECURE_NO_WARNINGS
 #include "core.h"
 
 // -----------------------------------------
@@ -98,9 +99,9 @@ void test01_inputInt(void)
     int intValue = 0;
 
     printf("TEST #1 - Instructions:\n"
-           "1) Enter the word 'error'  [ENTER]\n"
-           "2) Enter the number '-100' [ENTER]\n"
-           ":>");
+        "1) Enter the word 'error'  [ENTER]\n"
+        "2) Enter the number '-100' [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputInt function:
     intValue = inputInt();
@@ -123,9 +124,9 @@ void test02_inputIntPositive(void)
     int intValue = -1;
 
     printf("TEST #2 - Instructions:\n"
-           "1) Enter the number '-100' [ENTER]\n"
-           "2) Enter the number '200'  [ENTER]\n"
-           ":>");
+        "1) Enter the number '-100' [ENTER]\n"
+        "2) Enter the number '200'  [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputIntPositive function:
     intValue = inputIntPositive();
@@ -148,11 +149,11 @@ void test03_inputIntRange(void)
     int intValue = 999;
 
     printf("TEST #3 - Instructions:\n"
-           "1) Enter the word 'error' [ENTER]\n"
-           "2) Enter the number '-4'  [ENTER]\n"
-           "3) Enter the number '12'  [ENTER]\n"
-           "4) Enter the number '-3'  [ENTER]\n"
-           ":>");
+        "1) Enter the word 'error' [ENTER]\n"
+        "2) Enter the number '-4'  [ENTER]\n"
+        "3) Enter the number '12'  [ENTER]\n"
+        "4) Enter the number '-3'  [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputIntRange function:
     intValue = inputIntRange(-3, 11);
@@ -175,8 +176,8 @@ void test04_inputIntRange(void)
     int intValue = 999;
 
     printf("TEST #4 - Instructions:\n"
-           "1) Enter the number '14' [ENTER]\n"
-           ":>");
+        "1) Enter the number '14' [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputIntRange function:
     intValue = inputIntRange(-40, 14);
@@ -199,11 +200,11 @@ void test05_inputCharOption(void)
     char charValue = 'x';
 
     printf("TEST #5 - Instructions:\n"
-           "1) Enter the character 'R' [ENTER]\n"
-           "2) Enter the character 'e' [ENTER]\n"
-           "3) Enter the character 'p' [ENTER]\n"
-           "4) Enter the character 'r' [ENTER]\n"
-           ":>");
+        "1) Enter the character 'R' [ENTER]\n"
+        "2) Enter the character 'e' [ENTER]\n"
+        "3) Enter the character 'p' [ENTER]\n"
+        "4) Enter the character 'r' [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputCharOption function:
     charValue = inputCharOption("qwErty");
@@ -227,10 +228,10 @@ void test06_inputCString(void)
 
     // Test explicit string length
     printf("TEST #6: - Instructions:\n"
-           "1) Enter the word 'horse'   [ENTER]\n"  // too short
-           "2) Enter the word 'chicken' [ENTER]\n"  // too long
-           "3) Enter the word 'SENECA'  [ENTER]\n"  // just right
-           ":>");
+        "1) Enter the word 'horse'   [ENTER]\n"  // too short
+        "2) Enter the word 'chicken' [ENTER]\n"  // too long
+        "3) Enter the word 'SENECA'  [ENTER]\n"  // just right
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputCString function:
     inputCString(cstringValue, 6, 6);
@@ -247,9 +248,9 @@ void test07_inputCString(void)
 
     // Test range of string length (shortest allowed)
     printf("TEST #7: - Instructions:\n"
-           "1) Enter the words 'Seneca College' [ENTER]\n"
-           "2) Enter the word 'CATS'            [ENTER]\n"
-           ":>");
+        "1) Enter the words 'Seneca College' [ENTER]\n"
+        "2) Enter the word 'CATS'            [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputCString function:
     inputCString(cstringValue, 4, 6);
@@ -266,9 +267,9 @@ void test08_inputCString(void)
 
     // Test range of string length (longest allowed)
     printf("TEST #8: - Instructions:\n"
-           "1) Enter the word 'dogs'  [ENTER]\n"
-           "2) Enter the word 'HORSES' [ENTER]\n"
-           ":>");
+        "1) Enter the word 'dogs'  [ENTER]\n"
+        "2) Enter the word 'HORSES' [ENTER]\n"
+        ":>");
 
     // You may want to comment the next line if you have not yet created the inputCString function:
     inputCString(cstringValue, 5, 6);
@@ -325,7 +326,7 @@ void test09_displayPhone(void)
     // You may want to comment the next line if you have not yet created the displayFormattedPhone function:
     displayFormattedPhone(phone7);
     printf("\n"
-           "////////////////////////////////////////\n\n");
+        "////////////////////////////////////////\n\n");
 }
 
 

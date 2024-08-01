@@ -1,9 +1,9 @@
 /*/////////////////////////////////////////////////////////////////////////
                         Assignment 1 - Milestone 3
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+Full Name  : Anton Samofalov
+Student ID#: 172271223
+Email      : asamofalov@myseneca.ca
+Section    : NJJ
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -32,6 +32,7 @@ piece of work is entirely of my own creation.
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+#include <stdbool.h>
 
 //////////////////////////////////////
 // USER INTERFACE FUNCTIONS
@@ -48,8 +49,30 @@ void suspend(void);
 // USER INPUT FUNCTIONS
 //////////////////////////////////////
 
+//Get a valid integer number
+int inputInt(void);
 
+//Validate the value entered is greater than 0
+int inputIntPositive(void);
 
+//Validate the value entered is between the range
+int inputIntRange(int lowerBound, int upperBound);
+
+//Get a single character and validate the character matches
+//any of the characters in the received C string argument
+char inputCharOption(const char* validChars);
+
+//Obtain user input for a C string value with a length in the character range specified by the 2bnd and 3rd arguments (inclusive)
+void inputCString(char* str, int minLength, int maxLength, bool isPhoneNumber);
+
+//Display an array of 10-character digits as a formatted phone number
+void displayFormattedPhone(const char* phone);
+
+// Determines if a given year is a leap year
+bool isLeapYear(int year);
+
+// Calculates the number of days in a specific month of a given year.
+int getDaysInMonth(int year, int month);
 
 // !!! DO NOT DELETE THE BELOW LINE !!!
 #endif // !CORE_H

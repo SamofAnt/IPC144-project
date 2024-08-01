@@ -1,9 +1,9 @@
 /*/////////////////////////////////////////////////////////////////////////
                         Assignment 1 - Milestone 2
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+Full Name  : Anton Samofalov
+Student ID#: 172271223
+Email      : asamofalov@myseneca.ca
+Section    : NJJ
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -39,11 +39,21 @@ piece of work is entirely of my own creation.
 //////////////////////////////////////
 
 // Data type: Phone
-// ToDo:
+struct Phone
+{
+    char description[PHONE_DESC_LEN + 1];
+    char number[PHONE_LEN+ 1];
+};
 
 
 // Data type: Patient 
-// ToDo:
+
+struct Patient
+{
+    int patientNumber;
+    char name[NAME_LEN + 1];
+    struct Phone phone;
+};
 
 
 // ClinicData type: Provided to student

@@ -13,7 +13,7 @@ Selection: 1
 
 Patient Management
 =========================
-1) VIEW   Patient Data
+1) VIEW   Patient Data1
 2) SEARCH Patients
 3) ADD    Patient
 4) EDIT   Patient
